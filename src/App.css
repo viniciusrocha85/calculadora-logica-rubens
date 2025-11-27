@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #121212;
+  color: #f5f5f5;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin-bottom: 8px;
+}
+
+.app-main {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* TECLADO */
+
+.keyboard {
+  background: #1f1f1f;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  min-width: 260px;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+
+.key-btn {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: #f5f5f5;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.key-btn:hover {
+  background: #3a3a3a;
+  box-shadow: 0 0 0 1px #4caf50;
+}
+
+.key-btn:active {
+  transform: scale(0.95);
+}
+
+/* PAINEL À DIREITA */
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expression-box {
+  background: #1f1f1f;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.expression-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.expression-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #121212;
+  color: #f5f5f5;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.expression-box input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.calc-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.calc-btn:hover {
+  background: #43a047;
+}
+
+.error {
+  margin-top: 10px;
+  color: #ff5252;
+  font-size: 14px;
+}
+
+.table-box {
+  background: #1f1f1f;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-x: auto;
+}
+
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-box th,
+.table-box td {
+  border: 1px solid #444;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.table-box th {
+  background: #2a2a2a;
+}
+
+.true-cell {
+  background: rgba(76, 175, 80, 0.25);
+}
+
+.false-cell {
+  background: rgba(244, 67, 54, 0.25);
+}
+
+.hint {
+  margin: 0;
+  color: #bbb;
+}
+
+/* Responsivo (tela menor) */
+@media (max-width: 768px) {
+  .app-main {
+    flex-direction: column;
+  }
+
+  .keyboard {
+    width: 100%;
+  }
+}
