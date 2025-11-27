@@ -1,73 +1,137 @@
-# Getting Started with Create React App
+🌟 Calculadora Lógica – Tabelas Verdade Interativas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aventura lógica criada com React!
 
-## Available Scripts
+Bem-vindo à Calculadora Lógica, um projeto desenvolvido para transformar expressões proposicionais em tabelas verdade completas, de maneira intuitiva, rápida e divertida.
+Se você sempre quis entender lógica como um mestre Jedi — ou apenas quer uma ferramenta poderosa para estudar — então você chegou ao lugar certo! 💡⚔️
 
-In the project directory, you can run:
+🚀 Sobre o projeto
 
-### `npm start`
+A Calculadora Lógica é uma aplicação feita em React, com um teclado próprio para montar expressões lógicas e um motor interno capaz de:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+interpretar variáveis (A, B, C...)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+analisar operadores como
+∧, ∨, ⊻, →, ↔, ∼
 
-### `npm test`
+validar parênteses e estrutura
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+gerar tabelas verdade completas
 
-### `npm run build`
+exibir o resultado de forma clara, elegante e rápida
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tudo isso funcionando diretamente no navegador, sem backend e sem mágica — só lógica! 🔮
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🧠 O que ela faz?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+✔ Aceita expressões como:
+(A ∧ B) → ∼C
+(A ∨ B) ↔ (C ⊻ D)
+∼(A → B) ∧ C
 
-### `npm run eject`
+✔ Monta automaticamente todas as combinações possíveis de valores verdade
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+✔ Avalia a expressão usando uma árvore sintática (AST)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✔ Indica o resultado final para cada linha: V ou F
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+✔ Interface com teclado lógico personalizado
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+✔ Visual moderno inspirado em calculadoras lógicas profissionais
 
-## Learn More
+🎮 Como usar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Escreva a expressão usando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+letras A–D
 
-### Code Splitting
+parênteses ( )
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+operadores:
 
-### Analyzing the Bundle Size
+Operador	Significado
+∼	NOT (negação)
+∧	AND (e)
+∨	OR (ou)
+⊻	XOR (ou exclusivo)
+→	Implicação
+↔	Bicondicional
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Pressione Gerar tabela ou o botão =.
 
-### Making a Progressive Web App
+Veja a tabela verdade aparecer como mágica! ✨
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🛠️ Tecnologias usadas
 
-### Advanced Configuration
+⚛️ React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🎨 CSS moderno e responsivo
 
-### Deployment
+🧩 Parser manual (tokenização + AST)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+⚡ Renderização eficiente com useState
 
-### `npm run build` fails to minify
+🏗️ Como rodar o projeto localmente
+git clone https://github.com/viniciusrocha85/calculadora-logica-rubens
+cd calculadora-logica-rubens
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# calculadora-logica-rubens" 
-"# calculadora-logica-rubens" 
-"# calculadora-logica-rubens" 
+
+Isso vai abrir no navegador em:
+
+http://localhost:3000
+
+
+📚 Lógica por trás dos operadores
+
+A calculadora entende todo o conjunto da lógica proposicional:
+
+NOT (∼A): inverte o valor
+
+AND (A ∧ B): verdadeiro se ambos forem verdadeiros
+
+OR (A ∨ B): verdadeiro se pelo menos um for
+
+XOR (A ⊻ B): verdadeiro se forem diferentes
+
+IMP (A → B): falso só quando A é V e B é F
+
+BICOND (A ↔ B): verdadeiro quando ambos forem iguais
+
+Tudo isso é resolvido usando uma árvore sintática recursiva, igual linguagens de programação de verdade.
+
+🎨 Design e usabilidade
+
+Tema escuro elegante
+
+Botões que lembram uma calculadora científica
+
+Tabela verdade com destaque visual em Verdadeiro e Falso
+
+Layout responsivo (funciona no celular também!) 📱
+
+Erros amigáveis: parênteses faltando, operadores inválidos, etc
+
+🧑‍🎓 Ideal para:
+
+estudantes de lógica
+
+alunos do ensino médio
+
+programadores iniciantes
+
+curiosos da matemática
+
+professores de filosofia 🧠
+
+quem gosta de apertar botões 😁
+
+❤️ Contribuições
+
+Sugestões são super bem-vindas!
+Se quiser adicionar novos operadores, novos temas ou até um modo “passo a passo”, abra uma issue ou faça um PR!
+
+✨ Licença
+
+Este projeto é open-source — modifique, estude e divirta-se com ele!
